@@ -12,7 +12,6 @@ for (int i = 0; i < 10; i++)
     dogs.Add(withVaccine);
 }
 
-
 foreach (var dog in dogs.OrderBy(dog => dog.Vaccines.Any()))
 {
     var hasVaccines = dog.Vaccines.Any() ? "Yes" : "No";
