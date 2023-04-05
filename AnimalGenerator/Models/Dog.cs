@@ -8,7 +8,6 @@
         public string OwnerName { get; set; }
         public List<Vaccine> Vaccines { get; private set; }
 
-
         /// <summary>
         /// This constructor is used for when the animal has vaccines.
         /// </summary>
@@ -22,7 +21,6 @@
             ArgumentNullException.ThrowIfNull(vaccines, nameof(vaccines));
             if (!vaccines.Any()) throw new Exception("No vaccines passed.");
             
-
             Id = Guid.NewGuid();
             Name = name;
             OwnerName = ownerName;
