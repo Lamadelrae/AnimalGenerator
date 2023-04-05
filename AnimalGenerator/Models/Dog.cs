@@ -34,6 +34,9 @@
         /// <param name="ownerName"></param>
         public Dog(string name, string ownerName)
         {
+            ArgumentNullException.ThrowIfNull(name, nameof(name));
+            ArgumentNullException.ThrowIfNull(ownerName, nameof(ownerName));
+            
             Id = Guid.NewGuid();
             Name = name;
             OwnerName = ownerName;
